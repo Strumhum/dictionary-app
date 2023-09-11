@@ -36,9 +36,16 @@ export default function Dictionary(props) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <form onSubmit={handleSubmit}>
-          <input type="search" name="search-field" onChange={handleKeyword} />
-        </form>
+        <section>
+          <h5>What word would you like to look up?</h5>
+          <form onSubmit={handleSubmit}>
+            <input type="search" name="search-field" onChange={handleKeyword} />
+          </form>
+          <small className="search-tip">
+            Type a word in the field above and hit ENTER to see your results
+            below
+          </small>
+        </section>
         <Results results={results} />
       </div>
     );
