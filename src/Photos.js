@@ -21,6 +21,14 @@ export default function Photos(props) {
             );
           })}
         </div>
+        <div className="credit text-center">
+          <small>
+            Photos supplied courtesy of{" "}
+            <a href="https://www.pexels.com/" target="_blank" rel="noreferrer">
+              Pexels
+            </a>
+          </small>
+        </div>
       </section>
     );
   } else {
