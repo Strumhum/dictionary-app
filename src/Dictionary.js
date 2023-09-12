@@ -27,13 +27,10 @@ export default function Dictionary(props) {
     const pexelsApiKey =
       "zfL4diViCR3o1OJpeC97BqDxbOhZSNF9LLLBrLb5wZzed6MIGU4lV7Hu";
     let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
-    let headers = { Authorization: `${pexelsApiKey}` };
-    const setHeaders =
-      ("set-cookie",
-      [
-        "same-site-cookie=bar; SameSite=Lax",
-        "cross-site-cookie=foo; SameSite=None; Secure",
-      ]);
+    let headers = {
+      Authorization: `${pexelsApiKey}`,
+    };
+
     axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
